@@ -1,0 +1,30 @@
+Character
+
+Enemy
+    - Is a Person
+
+Person
+    - Basic properties
+        - Name
+        - Health
+        - levels
+        - backpack
+        - stats
+
+Scenarios
+    - Chance roll (roll die)
+
+Room
+    - 4 directions
+    - description
+    - items
+    - character
+
+items
+    - name
+    - description
+
+Backpack
+    - type of item
+    - max size
+    - items
