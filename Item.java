@@ -1,10 +1,10 @@
-public class Items {
+public class Item implements Thing {
 
     private String name;
     private String description;
 
     // constructor
-    public Items(String name, String description) {
+    public Item(String name, String description) {
         this.name = name;
         this.description = description;
     }

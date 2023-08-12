@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Game {
+    // private ArrayList<Item> inventory = new ArrayList<Item>();
+    
     Player player = new Player("Yoshi", 1, 10); // player
     Room room0 = new Room(); // starting room
     Room room1 = new Room(); // second test room
@@ -28,10 +30,13 @@ public class Game {
         room1.setSouth(room0);
 
         position = 0;
+        
     }
 
     public void startGame() {
+        HealthPotion hp = new HealthPotion("Health Potion", null);
         System.out.println("Welcome to text adventure game!");
+        player.take(hp);
         
         while (loop) {
             gameLoop(); 
