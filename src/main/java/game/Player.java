@@ -1,15 +1,13 @@
-package src.main.java.Actor;
+package src.main.java.game;
 
-import src.main.java.Things.Backpack;
-import src.main.java.Things.Item;
-import src.main.java.Things.Thing;
+import src.main.java.Items.Backpack;
 
 public class Player extends Person {
     private Backpack backpack;
 
     public Player(String name, int level, int maxHealth) {
         super(name, level, maxHealth);
-        this.backpack = new Backpack("Starter Backpack", 10);
+        this.backpack = new Backpack("Starter Backpack", "A small backpack.", 10);
     }
 
     public void lookAt(Thing thing) {

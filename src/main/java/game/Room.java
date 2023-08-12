@@ -1,5 +1,5 @@
-package src.main.java.Places;
-public class Room {
+package src.main.java.game;
+public class Room implements Thing {
     private String name;
     private String description;
 

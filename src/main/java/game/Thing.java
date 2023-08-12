@@ -1,4 +1,5 @@
-package src.main.java.Things;
+package src.main.java.game;
+
 public interface Thing {
     public String getName();
     public void setName(String name);

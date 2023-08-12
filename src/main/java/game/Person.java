@@ -1,4 +1,4 @@
-package src.main.java.Actor;
+package src.main.java.game;
 public class Person {
     private String name;
     private int level;

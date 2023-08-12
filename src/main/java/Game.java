@@ -1,26 +1,26 @@
 package src.main.java;
 import java.util.Scanner;
 
-import src.main.java.Actor.Player;
-import src.main.java.Places.Room;
-import src.main.java.Things.HealthPotion;
+import src.main.java.Items.HealthPotion;
+import src.main.java.game.Player;
+import src.main.java.game.Room;
 
 public class Game {
     // private ArrayList<Item> inventory = new ArrayList<Item>();
     
-    Player player = new Player("Yoshi", 1, 10); // player
-    Room room0 = new Room(); // starting room
-    Room room1 = new Room(); // second test room
+    static Player player = new Player("Yoshi", 1, 10); // player
+    static Room room0 = new Room(); // starting room
+    static Room room1 = new Room(); // second test room
 
-    Scanner input;
-    Boolean loop = true;
+    static Scanner input;
+    static Boolean loop = true;
     
-    int position; // index for map array
+    static int position; // index for map array
 
     // map array
-    Room[] map;
+    static Room[] map;
 
-    public void initGame() {
+    public static void initGame() {
         room0 = new Room();
         map = new Room[4];
         map[0] = room0;
@@ -37,23 +37,24 @@ public class Game {
         position = 0;
     }
 
-    public void startGame() {
-        HealthPotion hp = new HealthPotion("Health Potion", null);
-        System.out.println("Welcome to text adventure game!");
+    public static void startGame() {
+        HealthPotion hp = new HealthPotion("Health Potion", "A red fruity potion encased in a spherical glass jar.");
+        System.out.println("Welcome to text adventure game, " + player.getName() + "!");
         player.take(hp);
-        
+
+        // game loop
         while (loop) {
             gameLoop(); 
         }
         input.close();
     }
 
-    public void gameLoop() {
+    public static void gameLoop() {
         input = new Scanner(System.in);
         System.out.println("What will you do?: ");
         String action = input.nextLine().toLowerCase().trim();
         
-        
+        // will implement an action handler in the future
         switch(action) {
             case "move":
                 System.out.println("Where will you move to?: (North, East, South, West)");
@@ -76,6 +77,9 @@ public class Game {
                             break;
                     }
                 break;
+            case "items":
+                    player.getBackpack().checkItems();
+                break;
             case "quit":
                 loop = false;
             default:
@@ -83,7 +87,7 @@ public class Game {
         }
     }
 
-    public void movePlayer(Room room) {
+    public static void movePlayer(Room room) {
         if(room == null) {
             System.out.println("No room ahead");
         } else {

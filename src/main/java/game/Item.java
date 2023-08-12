@@ -1,5 +1,6 @@
-package src.main.java.Things;
-public class Item implements Thing {
+package src.main.java.game;
+
+public abstract class Item implements Thing {
 
     private String name;
     private String description;
@@ -27,4 +28,7 @@ public class Item implements Thing {
         this.description = description;
     }
 
+    public void inspectItem(Item item) {
+        System.out.println(item.getDescription());
+    }
 }
