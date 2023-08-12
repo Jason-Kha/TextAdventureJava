@@ -1,3 +1,4 @@
+package src.main.java.Things;
 public class Item implements Thing {
 
     private String name;

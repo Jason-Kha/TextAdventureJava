@@ -1,3 +1,4 @@
+package src.main.java.Things;
 public class Potion extends Item {
 
     public Potion(String name, String description) {

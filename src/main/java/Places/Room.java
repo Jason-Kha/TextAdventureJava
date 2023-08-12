@@ -1,3 +1,4 @@
+package src.main.java.Places;
 public class Room {
     private String name;
     private String description;

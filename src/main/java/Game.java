@@ -1,4 +1,9 @@
+package src.main.java;
 import java.util.Scanner;
+
+import src.main.java.Actor.Player;
+import src.main.java.Places.Room;
+import src.main.java.Things.HealthPotion;
 
 public class Game {
     // private ArrayList<Item> inventory = new ArrayList<Item>();
@@ -30,7 +35,6 @@ public class Game {
         room1.setSouth(room0);
 
         position = 0;
-        
     }
 
     public void startGame() {

@@ -1,3 +1,9 @@
+package src.main.java.Actor;
+
+import src.main.java.Things.Backpack;
+import src.main.java.Things.Item;
+import src.main.java.Things.Thing;
+
 public class Player extends Person {
     private Backpack backpack;
 
