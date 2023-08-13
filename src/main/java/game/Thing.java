@@ -1,8 +1,23 @@
 package src.main.java.game;
 
-public interface Thing {
-    public String getName();
-    public void setName(String name);
-    public String getDescription();
-    public void setDescription(String description);
+public class Thing {
+    private String name;
+    private String description;
+
+    public Thing(String name, String description) {
+        
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
