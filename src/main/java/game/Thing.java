@@ -5,7 +5,8 @@ public class Thing {
     private String description;
 
     public Thing(String name, String description) {
-        
+        this.name = name;
+        this.description = description;
     }
 
     public String getName() {

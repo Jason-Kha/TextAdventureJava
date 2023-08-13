@@ -1,7 +1,5 @@
 package src.main.java.Items;
 
-import src.main.java.game.Item;
-
 public abstract class Potion extends Item {
 
     public Potion(String name, String description) {

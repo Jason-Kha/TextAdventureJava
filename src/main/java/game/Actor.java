@@ -1,21 +1,18 @@
 package src.main.java.game;
-public class Actor {
-    private String name;
+
+import src.main.java.Items.Backpack;
+
+public class Actor extends Thing {
+
     private int level;
     private int maxHealth;
+    private Room location;
+    private Backpack backpack;
 
-    public Actor(String name, int level, int maxHealth) {
-        this.name = name;
-        this.level = level;
-        this.maxHealth = maxHealth;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Actor(String name, String description, Room room) {
+        super(name, description);
+        this.location = room;
+        this.backpack = new Backpack(name, description, 10);
     }
 
     public int getLevel() {
@@ -34,4 +31,19 @@ public class Actor {
         this.maxHealth = maxHealth;
     }
 
+    public Room getLocation() {
+        return location;
+    }
+
+    public void setLocation(Room location) {
+        this.location = location;
+    }
+
+    public Backpack getBackpack() {
+        return backpack;
+    }
+
+    public void setBackpack(Backpack backpack) {
+        this.backpack = backpack;
+    }
 }

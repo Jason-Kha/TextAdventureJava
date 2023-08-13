@@ -1,68 +1,57 @@
 package src.main.java.game;
-public class Room implements Thing {
-    private String name;
-    private String description;
 
-    private Room north;
-    private Room east;
-    private Room south;
-    private Room west;
+import src.main.java.game.Consts.Rm;
 
-    /*
-    public Room(String name, String description, Room north, Room east, Room south, Room west) {
-        this.name = name;
-        this.description = description;
+public class Room extends Thing {
+    private Rm north;
+    private Rm east;
+    private Rm south;
+    private Rm west;
+
+    // constructor
+    public Room(String name, String description, Rm north, Rm east, Rm south, Rm west) {
+        super(name, description);
         this.north = north;
         this.east = east;
         this.south = south;
         this.west = west;
-    }*/
-
-    public String getName() {
-        return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    // methods
+    public String describe() {
+        return "Describe";
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Room getNorth() {
+    // getters & setters
+    public Rm getNorth() {
         return north;
     }
 
-    public void setNorth(Room north) {
+    public void setNorth(Rm north) {
         this.north = north;
     }
 
-    public Room getEast() {
+    public Rm getEast() {
         return east;
     }
 
-    public void setEast(Room east) {
+    public void setEast(Rm east) {
         this.east = east;
     }
 
-    public Room getSouth() {
+    public Rm getSouth() {
         return south;
     }
 
-    public void setSouth(Room south) {
+    public void setSouth(Rm south) {
         this.south = south;
     }
 
-    public Room getWest() {
+    public Rm getWest() {
         return west;
     }
 
-    public void setWest(Room west) {
+    public void setWest(Rm west) {
         this.west = west;
     }
 }

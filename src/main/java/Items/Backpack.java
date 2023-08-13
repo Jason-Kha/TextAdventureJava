@@ -1,17 +1,13 @@
 package src.main.java.Items;
 import java.util.ArrayList;
 
-import src.main.java.game.Item;
-
 public class Backpack extends Item {
-    private String name;
     private int maxSize;
     private ArrayList<Item> inventory;
 
     // constructor
     public Backpack(String name, String description, int maxSize) {
         super(name, description);
-        this.name = name;
         this.maxSize = maxSize;
         this.inventory = new ArrayList<Item>();
     }
@@ -49,18 +45,9 @@ public class Backpack extends Item {
         this.inventory = inventory;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void checkItems() {
         for (Item item : this.inventory) {
             System.out.println(item.getName() + " - " + item.getDescription());
         }
     }
-
 }
