@@ -40,7 +40,9 @@ public class Game {
     public static void startGame() {
         HealthPotion hp = new HealthPotion("Health Potion", "A red fruity potion encased in a spherical glass jar.");
         System.out.println("Welcome to text adventure game, " + player.getName() + "!");
-        player.take(hp);
+        player.getBackpack().addItem(hp);
+        player.getBackpack().addItem(hp);
+        player.getBackpack().addItem(hp);
 
         // game loop
         while (loop) {
@@ -53,7 +55,7 @@ public class Game {
         input = new Scanner(System.in);
         System.out.println("What will you do?: ");
         String action = input.nextLine().toLowerCase().trim();
-        
+
         // will implement an action handler in the future
         switch(action) {
             case "move":

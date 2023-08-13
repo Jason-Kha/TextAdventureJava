@@ -2,7 +2,7 @@ package src.main.java.Items;
 
 import src.main.java.game.Item;
 
-public class Potion extends Item {
+public abstract class Potion extends Item {
 
     public Potion(String name, String description) {
         super(name, description);

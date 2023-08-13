@@ -19,17 +19,16 @@ public class Backpack extends Item {
     // methods
     public void addItem(Item item) {
         if (inventory.size() + 1 > maxSize) {
-            System.out.println("You're inventory is full!");
+            System.out.println("Your inventory is full!");
         }
         if (inventory.size() + 1 < maxSize) {
             inventory.add(item);
-            System.out.println(item.getName() + " was added to your inventory");
         }
     }
 
     public void removeItem(Item item) {
         inventory.remove(item);
-        System.out.println(item.getName() + " was removed from your inventory");
+        // System.out.println(item.getName() + " was removed from your inventory");
 
     }
 
@@ -59,16 +58,8 @@ public class Backpack extends Item {
     }
 
     public void checkItems() {
-        int i = 0;
-        int size = this.inventory.size();
         for (Item item : this.inventory) {
-            if(i < size - 1) {
-                System.out.print(item.getName() + " - " + item.getDescription() + ", ");
-            }
-            else {
-                System.out.println(item.getName() + " - " + item.getDescription());
-            }
-            i++;
+            System.out.println(item.getName() + " - " + item.getDescription());
         }
     }
 

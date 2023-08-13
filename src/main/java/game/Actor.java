@@ -1,10 +1,10 @@
 package src.main.java.game;
-public class Person {
+public class Actor {
     private String name;
     private int level;
     private int maxHealth;
 
-    public Person(String name, int level, int maxHealth) {
+    public Actor(String name, int level, int maxHealth) {
         this.name = name;
         this.level = level;
         this.maxHealth = maxHealth;

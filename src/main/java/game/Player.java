@@ -2,7 +2,7 @@ package src.main.java.game;
 
 import src.main.java.Items.Backpack;
 
-public class Player extends Person {
+public class Player extends Actor {
     private Backpack backpack;
 
     public Player(String name, int level, int maxHealth) {
@@ -16,6 +16,7 @@ public class Player extends Person {
 
     public void take(Item item) {
         backpack.addItem(item);
+        System.out.println(item.getName() + " was added to your inventory");
         // remove item from world
     }
 
